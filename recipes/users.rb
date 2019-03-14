@@ -4,6 +4,7 @@ passwd = node['msp']['admin_passwd']
 if mac_os_x?
   macos_user "create admin user #{user_name}" do
     username user_name
+    fullname node['msp']['admin_fullname']
     autologin true
     admin true
     password passwd
