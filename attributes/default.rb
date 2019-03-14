@@ -9,5 +9,5 @@ default['msp']['nix']['base_pkgs'] = %w(google-chrome-stable)
 default['msp']['std']['dev_pkgs'] = %w(emacs git python3 ruby)
 default['msp']['nix']['dev_pkgs'] = %w(code nodejs silversearcher-ag)
 
-default['msp']['casks'] = %w(emacs google-chrome java visual-studio-code)
+default['homebrew']['casks'] = %w(emacs google-chrome iterm2 java visual-studio-code)
 default['homebrew']['formulas'] = %w(git git-extras htop node ranger python3 ruby the_silver_searcher tree)
