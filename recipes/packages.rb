@@ -1,6 +1,8 @@
-packages = node['msp']['std']['base_pkgs'] + node['msp']['std']['dev_pkgs']
+
 
 if linux?
+  packages = node['msp']['std']['base_pkgs'] + node['msp']['std']['dev_pkgs']
+
   apt_repository 'chrome' do
     uri 'http://dl.google.com/linux/chrome/deb'
     distribution 'stable'
@@ -19,8 +21,15 @@ if linux?
 
   packages = packages + node['msp']['nix']['base_pkgs'] + node['msp']['nix']['dev_pkgs']
   packages += %w(ubuntu-desktop unity)
+
+  packages.each do |install|
+    package install
+  end
 end
 
-packages.each do |install|
-  package install
+if mac_os_x?
+  include_recipe 'homebrew::install_formulas'
+  include_recipe 'homebrew::install_casks'
 end
+
+
