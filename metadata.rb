@@ -13,4 +13,6 @@ supports 'mac_os_x'
 supports 'ubuntu', '= 16.04'
 supports 'ubuntu', '= 18.04'
 
-depends 'chef-sugar', '~> 4.1'
+depends 'chef-sugar'
+depends 'homebrew'
+depends 'macos'
