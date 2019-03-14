@@ -1,9 +1,5 @@
 user = node['msp']['admin_user']
+user_dir = mac_os_x? ? '/Users' : '/home'
+user_home = ::File.join(user_dir, user)
 
-users_dir = if mac_os_x?
-              '/Users'
-            else
-              '/home'
-            end
-
-directory ::File.join(users_dir, user, 'Documents')
+directory ::File.join(user_home, 'Documents')
