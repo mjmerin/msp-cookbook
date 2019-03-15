@@ -8,6 +8,7 @@ Chef Cookbook used to provision my home systems with a base configuration.
 
 - Ubuntu 16.04 LTS
 - Ubuntu 18.04 LTS
+- macOS 10.13.5 High Sierra
 
 ### Chef
 
@@ -21,6 +22,12 @@ Chef Cookbook used to provision my home systems with a base configuration.
 - `default['msp']['dev_pkgs'] = %w(code emacs git nodejs python3 ruby)`
 
 ## Recipes
+
+### Config
+
+Configure `.bash_profile` and machine name. 
+
+**Usage:** `include_recipe 'msp::config'`
 
 ### Directories
 
