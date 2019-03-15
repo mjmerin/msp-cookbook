@@ -31,5 +31,3 @@ if mac_os_x?
   include_recipe 'homebrew::install_formulas'
   include_recipe 'homebrew::install_casks'
 end
-
-
