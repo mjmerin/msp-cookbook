@@ -18,8 +18,6 @@ Chef Cookbook used to provision my home systems with a base configuration.
 
 - `default['msp']['admin_user'] = 'mjmerin'`
 - `default['msp']['admin_passwd'] = 'password'`
-- `default['msp']['base_pkgs'] = %w(libreoffice google-chrome-stable)`
-- `default['msp']['dev_pkgs'] = %w(code emacs git nodejs python3 ruby)`
 
 ## Recipes
 
@@ -34,6 +32,12 @@ Configure `.bash_profile` and machine name.
 Create user directories. 
 
 **Usage:** `include_recipe 'msp::directories'`
+
+### Git
+
+Create an appropriate `.gitconfig`. 
+
+**Usage:** `include_recipe 'msp::git'`
 
 ### Packages
 
