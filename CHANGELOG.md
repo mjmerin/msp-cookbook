@@ -6,4 +6,5 @@ This file is used to list changes made in each version of the msp cookbook.
 ### Added
 - Initial commit.
 - macOS High Sierra support, including basic Chef Spec and Integration tests. 
+- `git` recipe installing `.gitconfig` file. 
 
