@@ -1,3 +1,4 @@
+user = node['msp']['admin_user']
 user_name = node['msp']['admin_fullname']
 user_dir = mac_os_x? ? '/Users' : '/home'
 user_home = ::File.join(user_dir, user)
