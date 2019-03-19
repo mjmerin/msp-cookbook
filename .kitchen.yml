@@ -24,9 +24,14 @@ platforms:
       box_url: https://vagrantcloud.com/bento/ubuntu-18.04
       box_check_update: true
 
+  - name: macos-high-sierra
+    driver:
+      box: vagrant-appunite/macos10.13.5
+      box_url: https://vagrantcloud.com/vagrant-appunite/macos10.13.5
+      box_check_update: true
 
 suites:
-  - name: default
+  - name: msp
     run_list:
     - recipe[msp::default]
     verifier:
