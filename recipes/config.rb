@@ -4,6 +4,9 @@
 #
 # Copyright:: 2023, Mark Merin, All Rights Reserved.
 
+user = node['msp']['admin_user']
+user_home = ::Dir.home(user)
+dotfile = mac_os_x? ? '.bash_profile' : '.profile'
 
 hostname node['msp']['hostname']
 

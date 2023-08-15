@@ -7,8 +7,7 @@
 
 user = node['msp']['admin_user']
 user_name = node['msp']['admin_fullname']
-user_dir = mac_os_x? ? '/Users' : '/home'
-user_home = ::File.join(user_dir, user)
+user_home = ::Dir.home(user)
 gitconfig = ::File.join(user_home, '.gitconfig')
 user_email = node['msp']['admin_user'] + '@gmail.com'
 
