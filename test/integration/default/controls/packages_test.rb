@@ -8,7 +8,7 @@ control 'packages' do
 
   if os.darwin?
     packages.each do |dependency|
-      describe file("/usr/local/Cellar/#{dependency}") do
+      describe package(dependency) do
         it { should exist }
       end
     end
