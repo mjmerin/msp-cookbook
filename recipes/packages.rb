@@ -1,4 +1,8 @@
-
+#
+# Cookbook:: msp
+# Recipe:: packages
+#
+# Copyright:: 2023, Mark Merin, All Rights Reserved.
 
 if linux?
   packages = node['msp']['std']['base_pkgs'] + node['msp']['std']['dev_pkgs']

@@ -2,7 +2,7 @@
 # Cookbook:: msp
 # Recipe:: default
 #
-# Copyright:: 2018, Mark Merin, All Rights Reserved.
+# Copyright:: 2023, Mark Merin, All Rights Reserved.
 
 include_recipe 'msp::users'
 include_recipe 'msp::directories'

@@ -1,7 +1,9 @@
-user = node['msp']['admin_user']
-user_dir = mac_os_x? ? '/Users' : '/home'
-user_home = ::File.join(user_dir, user)
-dotfile = mac_os_x? ? '.bash_profile' : '.profile'
+#
+# Cookbook:: msp
+# Recipe:: config
+#
+# Copyright:: 2023, Mark Merin, All Rights Reserved.
+
 
 hostname node['msp']['hostname']
 
