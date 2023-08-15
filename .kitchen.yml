@@ -19,6 +19,12 @@ platforms:
       box_url: https://vagrantcloud.com/bento/ubuntu-18.04
       box_check_update: true
 
+  - name: ubuntu23-arm
+    driver:
+      box: bento/ubuntu-23.04-arm64
+      box_url: https://vagrantcloud.com/bento/ubuntu-23.04-arm64
+      box_check_update: true
+
   - name: macos-high-sierra
     driver:
       box: vagrant-appunite/macos10.13.5
