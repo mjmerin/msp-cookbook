@@ -10,9 +10,7 @@ issues_url 'https://github.com/mjmerin/msp-cookbook/issues'
 source_url 'https://github.com/mjmerin/msp-cookbook'
 
 supports 'mac_os_x'
-supports 'ubuntu', '= 16.04'
-supports 'ubuntu', '= 18.04'
+supports 'ubuntu'
 
-depends 'chef-sugar'
 depends 'homebrew'
 depends 'macos'
