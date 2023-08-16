@@ -7,7 +7,6 @@
 user = node['msp']['admin_user']
 user_name = node['msp']['admin_fullname']
 user_dir = mac_os_x? ? '/Users' : '/home'
-user_home = ::File.join(user_dir, user)
 user_email = node['msp']['admin_user'] + '@gmail.com'
 
 execute "Set git user name to #{user_name}" do
