@@ -8,7 +8,6 @@ user = node['msp']['admin_user']
 user_name = node['msp']['admin_fullname']
 user_dir = mac_os_x? ? '/Users' : '/home'
 user_home = ::File.join(user_dir, user)
-gitconfig = ::File.join(user_home, '.gitconfig')
 user_email = node['msp']['admin_user'] + '@gmail.com'
 
 execute "Set git user name to #{user_name}" do
@@ -25,9 +24,3 @@ execute 'Set git core editor to emacs' do
   command 'git config --global core.editor emacs'
   only_if 'git -v | grep version'
 end
-
-# execute "Copy .gitconfig from vagrant user home over to #{user_home}" do
-#   command "cp /Users/vagrant/.gitconfig #{gitconfig}"
-#   only_if "git -v | grep version"
-#   only_if ::File.exists?('/Users/vagrant/.gitconfig')
-# end
