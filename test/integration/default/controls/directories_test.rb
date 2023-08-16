@@ -1,5 +1,5 @@
 
-directories = %w(coding docs)
+directories = %w(coding Documents)
 
 control 'directories' do
   title 'what directories are present'
