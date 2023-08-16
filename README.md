@@ -5,9 +5,7 @@ Chef Cookbook used to provision my home systems with a base configuration.
 ## Requirements
 
 ### Platforms
-
-- Ubuntu 16.04 LTS
-- Ubuntu 18.04 LTS
+- Ubuntu 22.04 LTS
 - macOS 10.13.5 High Sierra
 
 ### Chef
@@ -23,7 +21,7 @@ Chef Cookbook used to provision my home systems with a base configuration.
 
 ### Config
 
-Configure `.bash_profile` and machine name. 
+Configure `.zshrc` and machine name. 
 
 **Usage:** `include_recipe 'msp::config'`
 
