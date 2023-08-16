@@ -2,13 +2,17 @@ control 'gitconfig' do
   title '.gitconfig presence'
   desc 'Verify existence of .gitconfig file'
 
-  if os.darwin?
-    describe file('/Users/mjmerin/.gitconfig') do
-      it { should exist }
-    end
+  gitconfig_path = if os.darwin?
+                     '/Users/mjmerin/.gitconfig'
+                   else
+                     '/home/mjmerin/.gitconfig'
+                   end
+
+  describe file(gitconfig_path) do
+    it { should exist }
   end
 
   describe command('git -v') do
-    it { should exist }
+    its('stdout') { should match /git version \d.\d\d.\d/ }
   end
 end
