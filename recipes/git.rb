@@ -4,9 +4,7 @@
 #
 # Copyright:: 2023, Mark Merin, All Rights Reserved.
 
-user = node['msp']['admin_user']
 user_name = node['msp']['admin_fullname']
-user_dir = mac_os_x? ? '/Users' : '/home'
 user_email = node['msp']['admin_user'] + '@gmail.com'
 
 execute "Set git user name to #{user_name}" do
