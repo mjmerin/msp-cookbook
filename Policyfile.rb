@@ -4,7 +4,7 @@
 # https://docs.chef.io/policyfile/
 
 # A name that describes what the system you're building with Chef does.
-name 'msp_base_image'
+name 'msp-cookbook'
 
 # Where to find external cookbooks:
 default_source :supermarket
