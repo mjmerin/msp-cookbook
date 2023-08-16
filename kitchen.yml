@@ -21,22 +21,16 @@ platforms:
       box_url: https://vagrantcloud.com/bento/ubuntu-18.04
       box_check_update: true
 
-  - name: ubuntu23-arm64
+  - name: ubuntu22-arm64
     driver:
-      box: bento/ubuntu-23.04-arm64
-      box_url: https://vagrantcloud.com/bento/ubuntu-23.04-arm64
+      box: bento/ubuntu-22.04-arm64
+      box_url: https://vagrantcloud.com/bento/ubuntu-22.04-arm64
       box_check_update: true
 
   - name: macos-high-sierra
     driver:
       box: vagrant-appunite/macos10.13.5
       box_url: https://vagrantcloud.com/vagrant-appunite/macos10.13.5
-      box_check_update: true
-
-  - name: macos-ventura-arm64
-    driver: 
-      box: zigaadam/macOS13.4.1-xcode14.3.1
-      box_url: https://vagrantcloud.com/zigaadam/macOS13.4.1-xcode14.3.1
       box_check_update: true
 
 suites:
