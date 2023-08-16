@@ -1,8 +1,6 @@
-title 'config-files'
 user_home = '/Users/mjmerin/'
-dirs = [coding, docs]
 
-control 'dot-files' do
+control 'dotfiles' do
   title 'what dot files are available'
   desc 'Verify dot files existence'
 
@@ -11,8 +9,18 @@ control 'dot-files' do
         it { should exist }
       end
 
-      describe command('echo $0') do
+      describe command('echo $SHELL') do
         its(stdout) {should match '/bin/zsh' }
       end
+  else
+    describe directory('/Users/home/mjmerin/.profile') do
+      it { should exist }
+    end
+
+    describe command('echo $SHELL') do
+      its(stdout) {should match '/bin/bash' }
+    end
+
   end
+
 end
