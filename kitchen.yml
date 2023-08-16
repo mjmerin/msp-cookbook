@@ -4,13 +4,15 @@ driver:
 
 provisioner:
   product_name: chef
-  product_version: 18
+  product_version: 18.1
   chef_license: accept
+  install_strategy: once
+  max_retries: 3
 
 verifier:
   name: inspec
   inspec_tests:
-  - test/integration/default
+    - test/integration/default
 
 platforms:
   - name: ubuntu18
@@ -43,7 +45,7 @@ suites:
       policyfile_path: ./Policyfile.rb
     verifier:
       controls:
-      - directories
-      - packages
-      - config-files
+        - directories
+        - packages
+        - dotfiles
 
