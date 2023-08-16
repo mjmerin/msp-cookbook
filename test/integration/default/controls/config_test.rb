@@ -3,20 +3,20 @@ control 'dotfiles' do
   desc 'Verify dot files existence'
 
   if os.darwin?
-    describe directory('/Users/mjmerin/.zshrc') do
+    describe file('/Users/mjmerin/.zshrc') do
       it { should exist }
     end
 
     describe command('echo $SHELL') do
-      its(stdout) { should match '/bin/zsh' }
+      its('stdout') { should match '/bin/zsh' }
     end
   else
-    describe directory('/Users/home/mjmerin/.profile') do
+    describe file('/home/mjmerin/.bashrc') do
       it { should exist }
     end
 
     describe command('echo $SHELL') do
-      its(stdout) { should match '/bin/bash' }
+      its('stdout') { should match '/bin/bash' }
     end
 
   end
