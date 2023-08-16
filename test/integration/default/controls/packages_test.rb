@@ -1,5 +1,3 @@
-title 'packages'
-
 packages = %w(git the_silver_searcher ranger htop)
 
 control 'packages' do
@@ -7,8 +5,8 @@ control 'packages' do
   desc 'Verify packages are installed'
 
   if os.darwin?
-    packages.each do |dependency|
-      describe package(dependency) do
+    packages.each do |pkg|
+      describe package(pkg) do
         it { should exist }
       end
     end
