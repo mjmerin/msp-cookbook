@@ -1,6 +1,6 @@
 title 'packages'
 
-packages = %w(git ruby the_silver_searcher ranger htop)
+packages = %w(git the_silver_searcher ranger htop)
 
 control 'packages' do
   title 'what packages are installed'

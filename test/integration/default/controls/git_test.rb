@@ -7,4 +7,8 @@ control 'gitconfig' do
   describe file('/Users/mjmerin/.gitconfig') do
     it { should exist }
   end
+
+  describe command('git -v') do
+    it { should exist }
+  end
 end
