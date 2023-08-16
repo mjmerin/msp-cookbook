@@ -4,7 +4,6 @@
 #
 # Copyright:: 2023, Mark Merin, All Rights Reserved.
 
-
 user_name = node['msp']['admin_user']
 passwd = node['msp']['admin_passwd']
 

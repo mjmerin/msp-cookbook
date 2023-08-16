@@ -19,5 +19,3 @@ remote_file ::File.join(user_home, dotfile) do
   source 'https://raw.githubusercontent.com/mjmerin/config_files/master/.bash_profile'
   action :create
 end
-
-
