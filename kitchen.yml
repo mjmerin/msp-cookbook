@@ -48,4 +48,5 @@ suites:
         - directories
         - packages
         - dotfiles
+        - gitconfig
 
