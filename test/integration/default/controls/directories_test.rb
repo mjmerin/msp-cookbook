@@ -1,5 +1,5 @@
 
-directories = %w(coding, docs)
+directories = %w(coding docs)
 
 control 'directories' do
   title 'what directories are present'
@@ -7,7 +7,6 @@ control 'directories' do
 
   if os.darwin?
     directories.each do |dir|
-
       directory_path = ::File.join('/Users', 'mjmerin', dir)
       describe directory(directory_path) do
         it { should exist }
