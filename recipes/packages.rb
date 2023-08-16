@@ -24,10 +24,12 @@ if linux?
   apt_update
 
   packages = packages + node['msp']['nix']['base_pkgs'] + node['msp']['nix']['dev_pkgs']
-  #packages += %w(ubuntu-desktop unity)
 
   packages.each do |install|
-    package install
+    package install do
+      options '-y'
+      action :install
+    end
   end
 end
 

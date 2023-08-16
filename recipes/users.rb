@@ -18,19 +18,20 @@ if mac_os_x?
     action :create
   end
 else
-  directory 'create user home' do
-    path ::File.join('/', 'home', user_name)
-    owner user_name
-    mode '0755'
-    action :create
-  end
-
   user user_name do
     manage_home true
+    username user_name
     gid 'sudo'
     home ::File.join('/', 'home', user_name)
     shell '/bin/bash'
     password '$1$5o8FPo4C$5kFNhdltQ84.gKBkPir/l/'
+    action :create
+  end
+
+  directory 'create user home' do
+    path ::File.join('/', 'home', user_name)
+    owner user_name
+    mode '0755'
     action :create
   end
 end
