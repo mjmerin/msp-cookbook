@@ -18,7 +18,7 @@ control 'gitconfig' do
     it { should exist }
   end
 
-  describe command('git -v') do
+  describe command('git --version') do
     its('stdout') { should match /git version \d.\d\d.\d/ }
   end
 end
