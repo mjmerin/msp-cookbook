@@ -15,8 +15,6 @@ directories = [user_home,
 directories.each do |dir|
   directory "create directory: #{dir}" do
     path dir
-    owner user
-    mode '0755'
     action :create
   end
 end
