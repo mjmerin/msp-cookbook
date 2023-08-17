@@ -5,8 +5,10 @@ Chef Cookbook used to provision my home systems with a base configuration.
 ## Requirements
 
 ### Platforms
-- Ubuntu 22.04 LTS
-- macOS 10.13.5 High Sierra
+- Ubuntu 18.04 x86
+- Ubuntu 22.04 LTS arm64
+- Ubuntu 23.04 arm64
+- macOS 10.13.5 High Sierra x86
 
 ### Chef
 

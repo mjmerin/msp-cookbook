@@ -15,19 +15,25 @@ verifier:
     - test/integration/default
 
 platforms:
-  - name: ubuntu18
+  - name: ubuntu18-x86
     driver:
       box: bento/ubuntu-18.04
       box_url: https://vagrantcloud.com/bento/ubuntu-18.04
       box_check_update: true
 
-  - name: ubuntu22-arm64
+  - name: ubuntu22-lts-arm64
     driver:
       box: bento/ubuntu-22.04-arm64
       box_url: https://vagrantcloud.com/bento/ubuntu-22.04-arm64
       box_check_update: true
 
-  - name: macos-high-sierra
+  - name: ubuntu23-arm64
+    driver:
+      box: bento/ubuntu-23.04-arm64
+      box_url: https://vagrantcloud.com/bento/ubuntu-23.04-arm64
+      box_check_update: true
+
+  - name: macos-high-sierra-x86
     driver:
       box: vagrant-appunite/macos10.13.5
       box_url: https://vagrantcloud.com/vagrant-appunite/macos10.13.5
