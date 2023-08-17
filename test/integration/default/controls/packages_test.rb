@@ -1,3 +1,8 @@
+#
+# Cookbook:: msp
+# Test:: packages
+#
+# Copyright:: 2023, Mark Merin, All Rights Reserved.
 
 packages = if os.darwin?
              %w(git the_silver_searcher htop)

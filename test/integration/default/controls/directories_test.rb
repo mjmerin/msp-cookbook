@@ -1,3 +1,8 @@
+#
+# Cookbook:: msp
+# Test:: directories
+#
+# Copyright:: 2023, Mark Merin, All Rights Reserved.
 
 directories = %w(coding Documents)
 

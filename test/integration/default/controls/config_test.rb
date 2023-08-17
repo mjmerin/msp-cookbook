@@ -1,3 +1,9 @@
+#
+# Cookbook:: msp
+# Test:: config
+#
+# Copyright:: 2023, Mark Merin, All Rights Reserved.
+
 control 'dotfiles' do
   title 'what dot files are available'
   desc 'Verify dot files existence'

@@ -1,3 +1,9 @@
+#
+# Cookbook:: msp
+# Test:: git
+#
+# Copyright:: 2023, Mark Merin, All Rights Reserved.
+
 control 'gitconfig' do
   title '.gitconfig presence'
   desc 'Verify existence of .gitconfig file'
