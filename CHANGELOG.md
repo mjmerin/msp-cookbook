@@ -2,7 +2,6 @@
 
 This file is used to list changes made in each version of the msp cookbook.
 
-
 ## [0.2.0] - 2023-08-16
 ### Added
 - Added Ubuntu 22.04 LTS and start using arm64 as my dev machine is now a M1/M2 Macbook Pro. 
