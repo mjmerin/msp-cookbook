@@ -5,9 +5,9 @@
 # Copyright:: 2023, Mark Merin, All Rights Reserved.
 
 packages = if os.darwin?
-             %w(git the_silver_searcher htop)
+             %w(git the_silver_searcher htop visual-studio-code wifi-password iterm2 archey4 google-chrome)
            else
-             %w(git silversearcher-ag htop)
+             %w(git silversearcher-ag htop chromium-browser emacs)
            end
 
 control 'packages' do
