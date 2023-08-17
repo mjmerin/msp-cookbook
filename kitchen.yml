@@ -33,12 +33,6 @@ platforms:
       box_url: https://vagrantcloud.com/bento/ubuntu-23.04-arm64
       box_check_update: true
 
-  - name: macos-high-sierra-x86
-    driver:
-      box: vagrant-appunite/macos10.13.5
-      box_url: https://vagrantcloud.com/vagrant-appunite/macos10.13.5
-      box_check_update: true
-
   - name: macos-big-sur-x86
     driver:
       box: andreiborisov/macos-bigsur-intel
