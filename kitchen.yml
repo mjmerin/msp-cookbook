@@ -15,10 +15,10 @@ verifier:
     - test/integration/default
 
 platforms:
-  - name: ubuntu18-x86
+  - name: ubuntu22-lts-x86
     driver:
-      box: bento/ubuntu-18.04
-      box_url: https://vagrantcloud.com/bento/ubuntu-18.04
+      box: bento/ubuntu-22.04
+      box_url: https://vagrantcloud.com/bento/ubuntu-22.04
       box_check_update: true
 
   - name: ubuntu22-lts-arm64
