@@ -1,17 +1,25 @@
-title 'directories'
-coding = '/Users/mjmerin/coding'
-docs = '/Users/mjmerin/Documents'
-dirs = [coding, docs]
+#
+# Cookbook:: msp
+# Test:: directories
+#
+# Copyright:: 2023, Mark Merin, All Rights Reserved.
+
+directories = %w(coding Documents)
 
 control 'directories' do
   title 'what directories are present'
-  desc 'Verify directories are present'
+  desc 'Verify specified directories are present'
 
-  if os.darwin?
-    dirs.each do |dir|
-      describe directory(dir) do
-        it { should exist }
-      end
+  user_home = if os.darwin?
+                '/Users/mjmerin'
+              else
+                '/home/mjmerin/'
+              end
+
+  directories.each do |dir|
+    directory_path = ::File.join(user_home, dir)
+    describe directory(directory_path) do
+      it { should exist }
     end
   end
 end

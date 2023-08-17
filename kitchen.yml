@@ -1,0 +1,52 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  product_name: chef
+  product_version: 18.1
+  chef_license: accept
+  install_strategy: once
+  max_retries: 3
+
+verifier:
+  name: inspec
+  inspec_tests:
+    - test/integration/default
+
+platforms:
+  - name: ubuntu22-lts-x86
+    driver:
+      box: bento/ubuntu-22.04
+      box_url: https://vagrantcloud.com/bento/ubuntu-22.04
+      box_check_update: true
+
+  - name: ubuntu22-lts-arm64
+    driver:
+      box: bento/ubuntu-22.04-arm64
+      box_url: https://vagrantcloud.com/bento/ubuntu-22.04-arm64
+      box_check_update: true
+
+  - name: ubuntu23-arm64
+    driver:
+      box: bento/ubuntu-23.04-arm64
+      box_url: https://vagrantcloud.com/bento/ubuntu-23.04-arm64
+      box_check_update: true
+
+  - name: macos-big-sur-x86
+    driver:
+      box: andreiborisov/macos-bigsur-intel
+      box_url: https://vagrantcloud.com/andreiborisov/macos-bigsur-intel
+      box_check_update: true
+
+suites:
+  - name: msp
+    provisioner:
+      policyfile_path: ./Policyfile.rb
+    verifier:
+      controls:
+        - directories
+        - packages
+        - dotfiles
+        - gitconfig
+
