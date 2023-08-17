@@ -10,4 +10,4 @@ default['msp']['std']['dev_pkgs'] = %w(emacs git)
 default['msp']['nix']['dev_pkgs'] = %w(silversearcher-ag)
 
 default['homebrew']['casks'] = %w(emacs google-chrome iterm2 visual-studio-code)
-default['homebrew']['formulas'] = %w(archey4 git htop ranger the_silver_searcher tree wifi-password)
+default['homebrew']['formulas'] = %w(archey4 git htop the_silver_searcher wifi-password)
